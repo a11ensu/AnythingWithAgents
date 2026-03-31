@@ -1,0 +1,40 @@
+ltm data-group internal /Common/dg_openai_model_list {
+    records {
+        gpt-5.2-codex {
+            data allow
+        }
+        gpt-5.3-codex {
+            data allow
+        }
+    }
+    type string
+}
+ltm data-group internal /Common/dg_openai_tool_list {
+    records {
+        apply_patch {
+            data block
+        }
+        bash {
+            data block
+        }
+        edit {
+            data block
+        }
+        glob {
+            data allow
+        }
+        grep {
+            data allow
+        }
+        read {
+            data allow
+        }
+        task {
+            data block
+        }
+        write {
+            data block
+        }
+    }
+    type string
+}

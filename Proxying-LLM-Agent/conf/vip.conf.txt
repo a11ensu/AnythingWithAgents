@@ -1,0 +1,28 @@
+ltm virtual /Common/vs_LLM_Agents {
+    description v21 vip with json profile
+    destination /Common/<>:443
+    ip-protocol tcp
+    mask 255.255.255.255
+    pool /Common/pool_LLM_API
+    profiles {
+        /Common/clientside_tls_profile {
+            context clientside
+        }
+        /Common/http { }
+        /Common/pf_json_openai { }
+        /Common/serverssl_tls_profile {
+            context serverside
+        }
+        /Common/tcp { }
+    }
+    rules {
+        /Common/ir_openai_api
+    }
+    serverssl-use-sni disabled
+    source 0.0.0.0/0
+    source-address-translation {
+        type automap
+    }
+    translate-address enabled
+    translate-port disabled
+}
