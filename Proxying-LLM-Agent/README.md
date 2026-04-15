@@ -169,7 +169,7 @@ graph RL
 
 ### Demo 1: Using a System Prompt Wrapper to Enforce Output Formatting
 
-https://github.com/user-attachments/assets/4c1ac334-3701-4512-ab6c-d6985a60dd4a
+https://github.com/user-attachments/assets/85fa21af-6c28-492c-915b-4135106e78fc
 
 ### Demo 2: Blocking Certain Tools for Agents
 
