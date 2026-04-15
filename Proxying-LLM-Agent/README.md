@@ -134,10 +134,11 @@ graph RL
 
 ### System Prompts Wrapper
 
-- user_prompts_${nonce}: Original system prompts from user
-- admin_prompts_${nonce}: Admin prompts1, added by iRule
-- final_guardrails_${nonce}: Admin prompts2, added by iRule
-- system_instruction_${nonce}: New system prompts BIG-IP sends to LLM API 
+- ${nonce}: random string generated from iRule per session;
+- user_prompts_${nonce}: Original system prompts from user;
+- admin_prompts_${nonce}: Admin prompts1, added by iRule;
+- final_guardrails_${nonce}: Admin prompts2, added by iRule;
+- system_instruction_${nonce}: New system prompts BIG-IP sends to LLM API.
 
 ```xml
 <system_instruction_${nonce}>
